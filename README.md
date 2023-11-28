@@ -2,7 +2,7 @@
 (target) draw_octagonal_inductor in skill language cadence 
 #some useful thoughts to someone to make in on skill.
 1) use path to draw the inductor
-2) use merge after to draw the inductor
+2) use merge afterwards
 3) you can draw the half inductor and then replica the remain (if you are using paths and afterwards merge you will see why is better this)
 4) you can call python scripts from skill very easily ipcBeginProcess, ipcWait, ipcReadProcess
 
