@@ -54,7 +54,8 @@ def draw_octagonal_inductor2(turns, spacing):
     original_x = np.zeros(9)
     original_y = np.zeros(9)
     for turn in range(turns):
-        radius = (turns - turn) * (spacing) * min(width, height) / (2 * turns)
+        radius = (turns - turn) * (spacing) * width / (2 * turns)
+        radius = (turns - turn) * (spacing) * height / (2 * turns)
         rotation = np.pi / 8
        # if turn % 2 != 0:
             #rotation = -rotation
@@ -67,7 +68,7 @@ def draw_octagonal_inductor2(turns, spacing):
            
                 xPoints[i] = centerX + radius * np.cos(angle)
                 
-                yPoints[i] = centerY + radius * np.sin(angle)
+                yPoints[i] = centerY + radiusY * np.sin(angle)
             print(xPoints)
             print(yPoints)
             print("##################")
