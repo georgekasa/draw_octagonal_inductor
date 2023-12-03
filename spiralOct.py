@@ -27,7 +27,8 @@ def draw_octagonal_inductorMine(turns, spacing=10):
     centerY = height / 2
 
     for turn in range(turns):
-        radius = ((turns - turn)*spacing) * min(width, height) / 2
+        radius = ((turns - turn)*spacing) * width / 2
+        radiusY = ((turns - turn)*spacing) * height) / 2
         rotation = np.pi / 8
         if turn % 2 != 0:
             rotation = -rotation
@@ -37,7 +38,7 @@ def draw_octagonal_inductorMine(turns, spacing=10):
         for i in range(9):
             angle = i * np.pi / 4 + rotation
             xPoints[i] = centerX + radius * np.cos(angle)
-            yPoints[i] = centerY + radius * np.sin(angle)
+            yPoints[i] = centerY + radiusY * np.sin(angle)
 
         ax.plot(xPoints, yPoints, color='black')
 
